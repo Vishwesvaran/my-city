@@ -340,7 +340,7 @@
       background-color: #f2831c;
     }
 
-    /*shop brands*/
+    /* /shop brands/ */
     h1 {
       text-align: left;
       margin-bottom: 20px;
@@ -406,7 +406,7 @@
       /* Ensures the images remain within their box */
     }
 
-    /*shop*/
+    /* /shop/ */
     h2 {
       text-align: left;
       margin-bottom: 20px;
@@ -520,7 +520,7 @@ h2 {
   max-height: 100%; 
   object-fit: contain; 
 }
-    /*buttom bannar*/
+    /* /buttom bannar/ */
     .button-container {
       display: grid;
       grid-template-columns: repeat(3, 2fr);
@@ -554,18 +554,240 @@ h2 {
       height: 200%;
       object-fit: cover;
     }
+    main {
+      max-width: none;
+      margin: 0 ;
+      padding: 20px;
+  }
+  
+  .section-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #333;
+  }
+  .categories-section {
+      padding: 24px;
+  }
+  
+  .categories-grid {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto; 
+      padding: 10px 0;
+      scrollbar-width: none; 
+      -ms-overflow-style: none; 
+  }
+  
+  
+  .categories-grid::-webkit-scrollbar {
+      display: none;
+  }.category-card {
+      display: flex;
+      align-items: center;
+      min-width: 200px;
+      height: 60px;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .category-name {
+      background: #ff6b1a;
+      color: white;
+      padding: 8px 16px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+  }
+  
+  .category-image {
+      flex: 1;
+      padding: 8px;
+      display: flex;
+      justify-content: center;
+  }
+  
+  .category-image img {
+      height: 40px;
+      object-fit: contain;
+  }
+  
+  /* products */
+  .deals-section {
+      padding: 24px;
+  }
+  
+  .section-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #333;
+  }
+  
+  .deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding-bottom: 10px;
+}
+ 
+.deal-card {
+    background: linear-gradient(135deg, #ff6b1a, #ff8c42);
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+ 
+.deal-main-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+}
+ 
+.deal-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+ 
+.deal-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+ 
+  
+  .current-price {
+      font-size: 24px;
+      font-weight: bold;
+  }
+  
+  .original-price {
+      text-decoration: line-through;
+      opacity: 0.8;
+  }
+  
+  .deal-thumbnails {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+  }
+  
+  .thumbnail {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .thumbnail img {
+      width: 100%;
+      height: 60px;
+      object-fit: contain;
+  }
+  /* header */
+  .header-top {
+      background: #ff6b1a;
+      padding: 12px 0;
+      color: white;
+  }
+  
+  .location-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+  
+  .location-selector {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+  }
+  
+  .search-cart-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex: 1;
+      max-width: 600px;
+      margin-left: 20px;
+  }
+  
+  .search-container {
+      position: relative;
+      flex: 1;
+  }
+  
+  .search-input {
+      width: 100%;
+      padding: 8px 40px 8px 16px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+  }
+  
+  .search-button {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+  }
+  
+  .cart-icon {
+      position: relative;
+      cursor: pointer;
+      font-size: 20px;
+  }
+  
+  .cart-count {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: white;
+      color: #ff6b1a;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: bold;
+  }
+  
   </style>
 </head>
 
 <body>
   <div class="nav_header" id="myHeader">
     <div class="mobile_header">
-      <svg width="32px" height="32px" viewBox="0 0 24.00 24.00" fill="black" xmlns="http://www.w3.org/2000/svg"
+      <svg width="32px" height="32px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"
         transform="rotate(0)">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
         <g id="SVGRepo_iconCarrier">
-          <path d="M4 6H20M4 12H20M4 18H20" stroke="black" stroke-width="2" stroke-linecap="round"
+          <path d="M4 6H20M4 12H20M4 18H20" stroke="white" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round"></path>
         </g>
       </svg>
@@ -575,6 +797,7 @@ h2 {
       <img src="/imgs/logo.png" alt="logo" />
       <img src="/icons/close.svg" alt="close" class="closeImage"/>
     </div>
+
     <div class="nav_links_placeholder">
       <ul class="nav_links">
         <li class="nav_link">
@@ -584,7 +807,7 @@ h2 {
           <a href="/Entertainment/home"><span>Entertainment</span></a>
         </li>
         <li class="nav_link active">
-          <a href="/shopping"><span>Shopping</span></a>
+          <a href="/homePage"><span>Shopping</span></a>
         </li>
         <li class="nav_link">
           <a href="/tourism"><span>Tourism</span></a>
@@ -594,7 +817,7 @@ h2 {
           <a href="beauty"><span>Pay Bills</span></a>
         </li>
         <li class="nav_link">
-          <a href="ex"><span>Hotels</span></a>
+          <a href="hotels"><span>Hotels</span></a>
         </li>
       </ul>
     </div>
@@ -657,161 +880,304 @@ h2 {
           <input type="text" placeholder="Search..." style="height: 60px;"/>
           <img src="/imgs/cart img/search.png" alt="Search" />
         </div>
+        
         <div class="add-card-icon">
           <a href="/cart/view"><img src="/imgs/cart img/Shopping Cart.png" alt="Add Card" /></a>
         </div>
+        
       </div>
     </div>
 
 
     <div class="location-buttons">
-      <a href="/shoppingCategory" style="text-decoration: none">
-        <button class="vsp">Categories</button>
-      </a>
-    </div>
-  </div>
-  <nav class="category-bar">
-    <ul>
-      <li class="category-item">
-        <a href="/mobiles">
-          <img src="/imgs/Apple-3.jpg" alt="Category 1">
-          <span>Mobiles</span>
-        </a>
-      </li>
-      <li class="category-item category-item-style2">
-        <a href="/shirts">
-          <img src="/imgs/ketch2.2.jpg" alt="Category 2">
-          <span>Shirts</span>
-        </a>
-      </li>
-    </ul>
-    <ul>
-      <li class="category-item">
-        <a href="/womens-tops">
-          <img src="/imgs/white1.webp" alt="Category 1">
-          <span>Tops</span>
-        </a>
-      </li>
-      <li class="category-item category-item-style2">
-        <a href="/homeTheatres">
-          <img src="/imgs/theater.png" alt="Category 2">
-          <span>Speakers</span>
-        </a>
-      </li>
-    </ul>
-    <ul>
-      <li class="category-item">
-        <a href="/mens-footwear">
-          <img src="/imgs/ASIAN-1.jpg" alt="Category 1">
-          <span>Footwear</span>
-        </a>
-      </li>
-      <li class="category-item category-item-style2">
-        <a href="home-needs">
-          <img src="/imgs/BSB HOME-2.jpg" alt="Category 2">
-          <span>Home Needs</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+      <main>
+        <section class="categories-section">
+            <a href="shoppingCategory" style="text-decoration: none;"><h2 class="section-title">Categories</h2></a>
+            <div class="categories-grid">
+                <a href="laptops" style="text-decoration: none;"><div class="category-card">
+                    <div class="category-name">Laptops</div>
+                    <div class="category-image">
+                        <img src="/imgs/laptop.jpg" alt="laptop">
+                    </div>
+                </div></a>
+                <a href="camera" style="text-decoration: none;"><div class="category-card">
+                    <div class="category-name">Camera</div>
+                    <div class="category-image">
+                        <img src="/imgs/camera.jpg" alt="Camera">
+                    </div>
+                </div></a>
+                <a href="accessories" style="text-decoration: none;"><div class="category-card">
+                    <div class="category-name">Accessory</div>
+                    <div class="category-image">
+                        <img src="/imgs/accessories1.jpg" alt="Accessory">
+                    </div>
+                </div></a>
+                <a href="tv" style="text-decoration: none;"><div class="category-card">
+                    <div class="category-name">TV</div>
+                    <div class="category-image">
+                        <img src="/imgs/tv1.jpg" alt="TV">
+                    </div>
+                </div></a>
+                <a href="headphones" style="text-decoration: none;"><div class="category-card">
+                    <div class="category-name">Headphones</div>
+                    <div class="category-image">
+                        <img src="/imgs/headphones.webp" alt="Headphones">
+                    </div>
+                </div></a>
+                <a href="skin-care" style="text-decoration: none;"><div class="category-card">
+                    <div class="category-name">Skin Care</div>
+                    <div class="category-image">
+                        <img src="/imgs/facewash.jpg" alt="facewash">
+                    </div>
+                </div></a>
+                <div class="category-card">
+                    <div class="category-name">Beauty</div>
+                    <div class="category-image">
+                        <img src="/images/beauty.jpg" alt="Home Theater">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <div class="categories">
-    <div class="heading-container">
-      <h2 class="heading" style="margin-top: 25px;">Deals near you</h2>
-    </div>
-    <div class="mens-wear">
-      <a href="/homeTheatres" style="text-decoration: none">
-        <div class="mens">
-          <img src="/imgs/theater.png" alt="" />
-          <p>Home Theater</p>
-        </div>
-      </a>
-      <a href="/shirts" style="text-decoration: none">
-        <div class="mens">
-          <img src="/imgs/shirt.png" alt="" />
-          <p>Shirts</p>
-        </div>
-      </a>
-      <a href="/doormates" style="text-decoration: none">
-        <div class="mens">
-          <img src="/imgs/doormates.png" alt="" />
-          <p>Doormates</p>
-        </div>
-      </a>
-      <a href="/rings" style="text-decoration: none">
-        <div class="mens">
-          <img src="/imgs/rings.png" alt="" />
-          <p>Rings</p>
-        </div>
-      </a>
+        <section class="deals-section">
+            <h2 class="section-title">Deals near you</h2>
+            <div class="deals-grid" id="deals-grid">
+              <a href="homeTheatres" style="text-decoration: none;"><div class="deal-card">
+                    <img src="/imgs/hometheatres.png" alt="Samsung HW-J355 SOUNDBAR PACK Home Theater System" class="deal-main-image">
+                    <div class="deal-title">Best collection of home theatres for your range</div>
+                    <div class="deal-price">
+                        <span class="current-price">1999 onwards</span>
+                    </div>
+                    <div class="deal-thumbnails">
+                        <div class="thumbnail">
+                            <img src="/imgs/hometheatres.png" alt="Thumbnail">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="/imgs/hometheatres2.png" alt="Thumbnail">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="/imgs/hometheatres3.png" alt="Thumbnail">
+                        </div>
+                    </div>
+                </div></a>
+                <a href="shirts" style="text-decoration: none;"><div class="deal-card">
+                    <img src="/imgs/shirt2.png" alt="Sony Alpha ILCE-6000Y/H 24.3MP Mirrorless Digital SLR Camera" class="deal-main-image">
+                    <div class="deal-title">Best Collection of Mens shirts for your range</div>
+                    <div class="deal-price">
+                        <span class="current-price">2499 onwards</span>
+                    </div>
+                    <div class="deal-thumbnails">
+                        <div class="thumbnail">
+                            <img src="/imgs/shirt1.png" alt="Thumbnail">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="/imgs/shirt3.png" alt="Thumbnail">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="/imgs/shirt4.png" alt="Thumbnail">
+                        </div>
+                    </div>
+                </div></a>
+                <a href="doormates" style="text-decoration: none;"><div class="deal-card">
+                    <img src="/imgs/doormates1.png" alt="" class="deal-main-image">
+                    <div class="deal-title">Doormates for Bathroom & home for your range</div>
+                    <div class="deal-price">
+                        <span class="current-price">299 onwards</span>
+                    </div>
+                    <div class="deal-thumbnails">
+                        <div class="thumbnail">
+                            <img src="/imgs/doormates2.png" alt="Thumbnail">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="/imgs/doormates3.png" alt="Thumbnail">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="/imgs/doormates4.png" alt="Thumbnail">
+                        </div>
+                    </div>
+                </div></a>
+                <a href="rings" style="text-decoration: none;"><div class="deal-card">
+                    <img src="/imgs/rings1.png" alt="" class="deal-main-image">
+                    <div class="deal-title">Best Collection of beautiful rings for your range</div>
+                    <div class="deal-price">
+                        <span class="current-price">269 onwards</span>
+                    </div>
+                    <div class="deal-thumbnails">
+                        <div class="thumbnail">
+                            <img src="/imgs/rings2.png" alt="Thumbnail">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="/imgs/rings3.png" alt="Thumbnail">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="/imgs/rings4.png" alt="Thumbnail">
+                        </div>
+                    </div>
+                </div></a>
 
-    </div>
-  </div>
+            </div>
+        </section>
+        <section class="deals-section">
+          <h2 class="section-title">Based on Intrest</h2>
+          <div class="deals-grid" id="deals-grid">
+            <a href="smart-watches" style="text-decoration: none;"><div class="deal-card">
+                  <img src="/imgs/smart.png" alt="Samsung HW-J355 SOUNDBAR PACK Home Theater System" class="deal-main-image">
+                  <div class="deal-title">Branded smart watches starts from</div>
+                  <div class="deal-price">
+                      <span class="current-price">999 onwards</span>
+                  </div>
+                  <div class="deal-thumbnails">
+                      <div class="thumbnail">
+                          <img src="/imgs/smart2.jpg" alt="Thumbnail">
+                      </div>
+                      <div class="thumbnail">
+                          <img src="/imgs/smart3.jpg" alt="Thumbnail">
+                      </div>
+                      <div class="thumbnail">
+                          <img src="/imgs/smart4.jpg" alt="Thumbnail">
+                      </div>
+                  </div>
+              </div></a>
+              <a href="womens-jeans" style="text-decoration: none;"><div class="deal-card">
+                  <img src="/imgs/jeans-women3.png" alt="Sony Alpha ILCE-6000Y/H 24.3MP Mirrorless Digital SLR Camera" class="deal-main-image">
+                  <div class="deal-title">Womens jeans starts from</div>
+                  <div class="deal-price">
+                      <span class="current-price">599 onwards</span>
+                  </div>
+                  <div class="deal-thumbnails">
+                      <div class="thumbnail">
+                          <img src="/imgs/jeans-women1.png" alt="Thumbnail">
+                      </div>
+                      <div class="thumbnail">
+                          <img src="/imgs/jeans-women2.png" alt="Thumbnail">
+                      </div>
+                      <div class="thumbnail">
+                          <img src="/imgs/jeans-women4.png" alt="Thumbnail">
+                      </div>
+                  </div>
+              </div></a>
+              <a href="bangles" style="text-decoration: none;"><div class="deal-card">
+                  <img src="/imgs/bangles2.png" alt="" class="deal-main-image">
+                  <div class="deal-title">Best Bangles for women starts from</div>
+                  <div class="deal-price">
+                      <span class="current-price">499 onwards</span>
+                  </div>
+                  <div class="deal-thumbnails">
+                      <div class="thumbnail">
+                          <img src="/imgs/bangles4.png" alt="Thumbnail">
+                      </div>
+                      <div class="thumbnail">
+                          <img src="/imgs/bangles1.png" alt="Thumbnail">
+                      </div>
+                      <div class="thumbnail">
+                          <img src="/imgs/bangles2.png" alt="Thumbnail">
+                      </div>
+                  </div>
+              </div></a>
+              <a href="bluetooth-earphones" style="text-decoration: none;"><div class="deal-card">
+                  <img src="/imgs/bluetooth1.jpg" alt="" class="deal-main-image">
+                  <div class="deal-title">Branded Bluetooth earbuds starts from</div>
+                  <div class="deal-price">
+                      <span class="current-price">899 onwards</span>
+                  </div>
+                  <div class="deal-thumbnails">
+                      <div class="thumbnail">
+                          <img src="/imgs/bluetooth2.jpg" alt="Thumbnail">
+                      </div>
+                      <div class="thumbnail">
+                          <img src="/imgs/bluetooth3.jpg" alt="Thumbnail">
+                      </div>
+                      <div class="thumbnail">
+                          <img src="/imgs/bluetooth4.jpg" alt="Thumbnail">
+                      </div>
+                  </div>
+              </div></a>
 
-  <div class="categories" style="margin-top: 50px">
-    <div class="heading-container">
-      <h2 class="heading">Based on interest</h2>
-    </div>
-    <div class="mens-wear">
-      <a href="/smart-watches" style="text-decoration: none">
-        <div class="mens">
-          <img src="/imgs/smart.png" alt="" />
-          <p>Smart Watches</p>
-        </div>
-      </a>
-      <a href="/womens-jeans" style="text-decoration: none">
-        <div class="mens">
-          <img src="/imgs/jeans-women.png" alt="" />
-          <p>Jeans</p>
-        </div>
-      </a>
-      <a href="/bangles" style="text-decoration: none">
-        <div class="mens">
-          <img src="/imgs/bangles.png" alt="" />
-          <p>Bangles</p>
-        </div>
-      </a>
-      
-      <a href="/bluetooth-earphones" style="text-decoration: none">
-        <div class="mens">
-          <img src="/imgs/bluetooth.png" alt="" />
-          <p>Bluetooth</p>
-        </div>
-      </a>
-    </div>
-  </div>
+          </div>
+      </section>
 
-  <div class="categories" style="margin-top: 50px">
-    <div class="heading-container">
-      <h2 class="heading">Kids & Home Needs and More</h2>
-    </div>
-    <div class="mens-wear">
-      <a href="/frocks" style="text-decoration: none;">
-        <div class="mens">
-          <img src="/imgs/frock.png" alt="" />
-          <p>Frock</p>
-        </div>
-      </a>  
-      <a href="/bedsheets" style="text-decoration: none">
-        <div class="mens">
-          <img src="/imgs/bedsheet.png" alt="" />
-          <p>Bedsheets</p>
-        </div>
-      </a>
-      <a href="/rompers" style="text-decoration: none;">
-        <div class="mens">
-          <img src="/imgs/rompers.png" alt="" />
-          <p>Rompers</p>
-        </div>
-      </a>
-      <a href="/curtains" style="text-decoration: none"><div class="mens">
-        <img src="/imgs/curtains.png" alt="" />
-        <p>Curtains & Sheers</p>
-      </div></a>
-    </div>
-  </div>
+      <section class="deals-section">
+        <h2 class="section-title">Kids, Home Needs and More</h2>
+        <div class="deals-grid" id="deals-grid">
+          <a href="frocks" style="text-decoration: none;"><div class="deal-card">
+                <img src="/imgs/frock1.jpg" alt="Samsung HW-J355 SOUNDBAR PACK Home Theater System" class="deal-main-image">
+                <div class="deal-title">Best collection of kids frocks for your range</div>
+                <div class="deal-price">
+                    <span class="current-price">999 onwards</span>
+                </div>
+                <div class="deal-thumbnails">
+                    <div class="thumbnail">
+                        <img src="/imgs/frock2.png" alt="Thumbnail">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="/imgs/frock3.png" alt="Thumbnail">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="/imgs/frock4.jpg" alt="Thumbnail">
+                    </div>
+                </div>
+            </div></a>
+            <a href="bedsheets" style="text-decoration: none;"><div class="deal-card">
+                <img src="/imgs/bedsheet1.jpg" alt="Sony Alpha ILCE-6000Y/H 24.3MP Mirrorless Digital SLR Camera" class="deal-main-image">
+                <div class="deal-title">Best Collection of Bedsheets for your range</div>
+                <div class="deal-price">
+                    <span class="current-price">899 onwards</span>
+                </div>
+                <div class="deal-thumbnails">
+                    <div class="thumbnail">
+                        <img src="/imgs/bedsheet2.jpg" alt="Thumbnail">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="/imgs/bedsheet3.jpg" alt="Thumbnail">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="/imgs/bedsheet4.jpg" alt="Thumbnail">
+                    </div>
+                </div>
+            </div></a>
+            <a href="rompers" style="text-decoration: none;"><div class="deal-card">
+                <img src="/imgs/romper1.jpg" alt="" class="deal-main-image">
+                <div class="deal-title">Best Collection of Baby rompers for your range</div>
+                <div class="deal-price">
+                    <span class="current-price">699 onwards</span>
+                </div>
+                <div class="deal-thumbnails">
+                    <div class="thumbnail">
+                        <img src="/imgs/romper2.jpg" alt="Thumbnail">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="/imgs/romper3.jpg" alt="Thumbnail">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="/imgs/romper2.jpg" alt="Thumbnail">
+                    </div>
+                </div>
+            </div></a>
 
-  <h2 style="padding-left: 12px; padding-top: 30px;">Shop By Brands</h2>
+            <a href="curtains" style="text-decoration: none;"><div class="deal-card">
+                <img src="/imgs/curtains1.png" alt="" class="deal-main-image">
+                <div class="deal-title">Beautiful collection of home curtains for your range</div>
+                <div class="deal-price">
+                    <span class="current-price">789 onwards</span>
+                </div>
+                <div class="deal-thumbnails">
+                    <div class="thumbnail">
+                        <img src="/imgs/curtains2.jpg" alt="Thumbnail">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="/imgs/curtains3.jpg" alt="Thumbnail">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="/imgs/curtains4.jpg" alt="Thumbnail">
+                    </div>
+                </div>
+            </div></a>
+
+        </div>
+    </section>
+    </main>
+
+  <h2 class="section-title" style="padding-left: 44px;">Shop By Brands</h2>
   <div class="container">
     <div class="category-container">
       <h3>Music</h3><br>
@@ -947,7 +1313,6 @@ h2 {
     hamburger.addEventListener("click", toggleNavbar);
     closebtn.addEventListener("click", toggleNavbar);
     
-  
   </script>
   
 </body>

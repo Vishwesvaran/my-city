@@ -17,14 +17,15 @@
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
         <g id="SVGRepo_iconCarrier">
-          <path d="M4 6H20M4 12H20M4 18H20" stroke="white" stroke-width="2" stroke-linecap="round"
+          <path d="M4 6H20M4 12H20M4 18H20" stroke="black" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round"></path>
         </g>
       </svg>
     </div>
-    <header id="header">
+    <header id="header" class="mobile-header">
       <div class="logo_placeholder">
         <img src="/imgs/logo.png" alt="logo" />
+        <img src="/icons/close.svg" alt="close" class="closeImage"/>
       </div>
       <div class="nav_links_placeholder">
         <ul class="nav_links">
@@ -153,6 +154,21 @@
       <p class="copy-rights">Copyright © 2024 MyCity. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    const hamburger = document.querySelector(".mobile_header");
+    const closebtn = document.querySelector('.closeImage');
+
+    const navbar = document.querySelector(".mobile-header");
+    function toggleNavbar(){
+      navbar.classList.toggle('active');
+      closebtn.classList.toggle('active');
+
+    }
+    
+    hamburger.addEventListener("click", toggleNavbar);
+    closebtn.addEventListener("click", toggleNavbar);
+  </script>
 
 </body>
 
