@@ -15,20 +15,23 @@
 
 <body>
     <div class="nav_header" id="myHeader">
-        <div class="mobile_header">
-            <svg width="32px" height="32px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg"
-                transform="rotate(0)">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                    <path d="M4 6H20M4 12H20M4 18H20" stroke="white" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                </g>
-            </svg>
-        </div>
+
         <header id="header">
-            <div class="logo_placeholder">
-                <img src="/img/logo.jpg" alt="logo" />
+            <div class="left_side">
+                <div class="mobile_header">
+                    <svg width="32px" height="32px" viewBox="0 0 24.00 24.00" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M4 6H20M4 12H20M4 18H20" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="logo_placeholder">
+                    <img src="/imgs/logo.png" alt="logo" />
+                </div>
             </div>
             <div class="nav_links_placeholder">
                 <ul class="nav_links">
@@ -48,7 +51,7 @@
         </header>
     </div>
     <div class="video_placeholder">
-        <video src="https://videos.pexels.com/video-files/4193130/4193130-sd_640_360_24fps.mp4" autoplay muted controls
+        <video src="https://videos.pexels.com/video-files/4193130/4193130-sd_640_360_24fps.mp4" autoplay muted
             loop></video>
     </div>
     <div class="cards_section">
@@ -492,15 +495,15 @@
             let scrollSpeed = 10; // Speed of scrolling (in pixels)
             const margin = 2; // Margin of error for resetting scroll
 
-// Function to scroll the container
-function autoScroll() {
-    cityExplore.scrollLeft += scrollSpeed;
+            // Function to scroll the container
+            function autoScroll() {
+                cityExplore.scrollLeft += scrollSpeed;
 
-    // If the scroll exceeds or equals the scrollable width, reset to the beginning
-    if (cityExplore.scrollLeft >= cityExplore.scrollWidth - cityExplore.clientWidth - margin) {
-        cityExplore.scrollLeft = 0; // Reset to the start
-    }
-}
+                // If the scroll exceeds or equals the scrollable width, reset to the beginning
+                if (cityExplore.scrollLeft >= cityExplore.scrollWidth - cityExplore.clientWidth - margin) {
+                    cityExplore.scrollLeft = 0; // Reset to the start
+                }
+            }
 
             // Log to check if the function is being called
             console.log("Starting auto scroll...");
@@ -625,6 +628,7 @@ function autoScroll() {
         // Set interval for slideshow (every 3 seconds)
         setInterval(kurImage, 3000); // 3000 milliseconds = 3 seconds
     </script>
+    <script th:src="@{/JS/MobileNav.js}"></script>
 </body>
 
 </html>
