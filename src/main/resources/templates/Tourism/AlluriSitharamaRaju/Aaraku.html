@@ -12,23 +12,50 @@
 </head>
 
 <body>
-    <div class="nav_header" hx-boost="true">
-        <header class="mobile-header">
-            <div class="logo_placeholder">
-                <img src="/img/logo.jpg" alt="logo">
+    <div class="nav_header" id="myHeader">
+        <header id="header">
+            <div class="left_side">
+                <div class="mobile_header">
+                    <svg width="32px" height="32px" viewBox="0 0 24.00 24.00" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" transform="rotate(0)">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M4 6H20M4 12H20M4 18H20" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="logo_placeholder">
+                    <img src="/imgs/logo.png" alt="logo" />
+                </div>
             </div>
             <div class="nav_links_placeholder">
                 <ul class="nav_links">
-                    <li class="nav_link"><a href="/mycity-homepage"><span>Home</span></a></li>
-                    <li class="nav_link"><a href="/entertainment"><span>Entertainment</span></a></li>
-                    <li class="nav_link"><a href="shopping"><span>Shopping</span></a></li>
-                    <li class="nav_link active"><a href="/tourism"><span>Tourism</span></a></li>
-                    <li class="nav_link"><a href="beauty"><span>Pay Bills</span></a></li>
-                    <li class="nav_link"><a href="ex"><span>Hotels</span></a></li>
+                    <li class="nav_link">
+                        <a href="/mycity-homepage"><span>Home</span></a>
+                    </li>
+                    <li class="nav_link">
+                        <a href="/Entertainment/home" hx-boost="false"><span>Entertainment</span></a>
+                    </li>
+                    <li class="nav_link">
+                        <a href="/shopping" hx-boost="false"><span>Shopping</span></a>
+                    </li>
+                    <li class="nav_link active">
+                        <a href="/tourism"><span>Tourism</span></a>
+                    </li>
+                    <li class="nav_link">
+                        <a href="/beauty" hx-boost="false"><span>Pay Bills</span></a>
+                    </li>
+                    <li class="nav_link">
+                        <a href="/hotels" hx-boost="false"><span>Hotels</span></a>
+                    </li>
                 </ul>
             </div>
-            <div class="login-button_placeholder">
-                <button class="login_button"><a href="/register">Sign Up</a></button>
+            <div class="login-button_placeholder" id="loginPlaceholder">
+                <button class="login_button">
+                    <a href="/register" class="signup-btn">Sign Up</a>
+                </button>
             </div>
         </header>
     </div>
