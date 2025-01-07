@@ -41,6 +41,8 @@ public class adminController {
     @Autowired
     private RoomImageService roomImageService;
 
+ 
+
 
     @GetMapping("/")
     public String index() {
@@ -52,7 +54,7 @@ public class adminController {
         return "songs";
     }
 
-    @GetMapping("/ex")
+    @GetMapping("/hotels")
     public String ex(Model model) {
         List<Hotel> hotelsList1 = hotelService.getAllHotels();
         

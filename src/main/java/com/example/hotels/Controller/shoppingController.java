@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -44,10 +43,10 @@ public class shoppingController {
 
         List<Shopping_Images> shoppingImages = shopping_ImageService.getImagesByProductId(id);
 
-    // Convert images to base64 for frontend
+        // Convert images to base64 for frontend
         List<String> base64Images = shoppingImages.stream()
-            .map(Shopping_Images::getBase64Image)
-            .collect(Collectors.toList());
+                .map(Shopping_Images::getBase64Image)
+                .collect(Collectors.toList());
         List<Product> similarProducts = productRepository.findByCategoryId(categoryId);
 
         List<String> highlightsList = Arrays.asList(product.getHighlights().split(","));
@@ -67,7 +66,7 @@ public class shoppingController {
                 .orElseThrow(() -> new IllegalArgumentException("Invalid product ID: " + id));
 
         return ResponseEntity.ok()
-                .header("Content-Type", "image/jpeg") 
+                .header("Content-Type", "image/jpeg")
                 .body(product.getImageFileName());
     }
 
@@ -160,7 +159,7 @@ public class shoppingController {
         model.addAttribute("products", productRepository.findByCategoryId(womensFootwearCategoryId));
         return "shirts";
     }
-    
+
     @GetMapping("/womens-kurta-set")
     public String womensKurta(Model model) {
         Long womensKurtaCategoryId = 38L;
@@ -437,21 +436,62 @@ public class shoppingController {
     }
 
     @GetMapping("/payment/{productId}/details")
-public String paymentPage(@PathVariable Long productId,
-                          @RequestParam int quantity,
-                          Model model) {
-    Product product = productRepository.findById(productId).orElse(null);
-    
-    if (product == null) {
-        throw new RuntimeException("Product not found!"); // Optional: Handle product not found
+    public String paymentPage(@PathVariable Long productId,
+            @RequestParam int quantity,
+            Model model) {
+        Product product = productRepository.findById(productId).orElse(null);
+
+        if (product == null) {
+            throw new RuntimeException("Product not found!"); // Optional: Handle product not found
+        }
+
+        double totalPrice = product.getPrice() * quantity; // Calculate the total price
+        model.addAttribute("product", product);
+        model.addAttribute("quantity", quantity);
+        model.addAttribute("totalPrice", totalPrice);
+        return "payment"; // Thymeleaf template name
     }
 
-    double totalPrice = product.getPrice() * quantity; // Calculate the total price
-    model.addAttribute("product", product);
-    model.addAttribute("quantity", quantity);
-    model.addAttribute("totalPrice", totalPrice);
-    return "payment"; // Thymeleaf template name
-}
+    @GetMapping("/laptops")
+    public String laptops(Model model) {
+        Long laptopsCategoryId = 36L;
+        model.addAttribute("products", productRepository.findByCategoryId(laptopsCategoryId));
+        return "shirts";
+    }
 
+    @GetMapping("/tv")
+    public String tvs(Model model) {
+        Long tvsCategoryId = 37L;
+        model.addAttribute("products", productRepository.findByCategoryId(tvsCategoryId));
+        return "shirts";
+    }
+
+    @GetMapping("/skin-care")
+    public String facewash(Model model) {
+        Long skincareCategoryId = 40L;
+        model.addAttribute("products", productRepository.findByCategoryId(skincareCategoryId));
+        return "shirts";
+    }
+
+    @GetMapping("/camera")
+    public String camera(Model model) {
+        Long cameraCategoryId = 41L;
+        model.addAttribute("products", productRepository.findByCategoryId(cameraCategoryId));
+        return "shirts";
+    }
+
+    @GetMapping("/accessories")
+    public String accessories(Model model) {
+        Long accessoriesCategoryId = 42L;
+        model.addAttribute("products", productRepository.findByCategoryId(accessoriesCategoryId));
+        return "shirts";
+    }
+
+    @GetMapping("/headphones")
+    public String headphones(Model model) {
+        Long headphonesCategoryId = 43L;
+        model.addAttribute("products", productRepository.findByCategoryId(headphonesCategoryId));
+        return "shirts";
+    }
 
 }
