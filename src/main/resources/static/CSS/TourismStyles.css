@@ -3247,26 +3247,40 @@ iframe {
         }
     }
 
+    .text-style_border {
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        text-align: left;
+        color: #f5640a;
+    }
+
+    .text_block {
+        margin: 90px 0 0 50px;
+    }
+
     .items .item {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 180px;
-        height: 140px;
+        width: 160px;
+        height: 110px;
+        margin-top: 80px;
     }
 
     .item.prev {
         z-index: 2;
         opacity: 0.15;
-        height: 120px;
+        height: 100px;
         transform: translate(-125%, -50%);
     }
 
     .item.next {
         z-index: 2;
         opacity: 0.15;
-        height: 120px;
+        height: 100px;
         transform: translate(25%, -50%);
     }
 
@@ -3274,8 +3288,8 @@ iframe {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        width: 240px;
+        transform: translate(-50%, 70%);
+        width: 220px;
         z-index: 100;
     }
 
@@ -3286,6 +3300,19 @@ iframe {
         position: relative;
         opacity: 1;
         transition: all 300ms ease-in-out;
+    }
+
+    .button-container .button:before {
+        content: "";
+        position: absolute;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        border-radius: 50%;
+        z-index: -99;
     }
 
     .section {
@@ -3405,7 +3432,7 @@ iframe {
 
     /* Styling for the city paragraph */
     .city-para {
-        width: 430px;
+        width: 420px;
         font-family: 'Poppins', sans-serif;
         font-size: 34px;
         font-weight: 600;
@@ -3609,21 +3636,22 @@ iframe {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 180px;
-        height: 140px;
+        width: 150px;
+        height: 110px;
+        margin-top: 80px;
     }
 
     .item.prev {
         z-index: 2;
         opacity: 0.15;
-        height: 120px;
+        height: 100px;
         transform: translate(-125%, -50%);
     }
 
     .item.next {
         z-index: 2;
         opacity: 0.15;
-        height: 120px;
+        height: 100px;
         transform: translate(25%, -50%);
     }
 
@@ -3643,6 +3671,37 @@ iframe {
         position: relative;
         opacity: 1;
         transition: all 300ms ease-in-out;
+    }
+
+    .items .button-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 70%);
+        width: 220px;
+        z-index: 100;
+    }
+
+    .button-container .button {
+        color: #fff;
+        font-size: 32px;
+        cursor: pointer;
+        position: relative;
+        opacity: 1;
+        transition: all 300ms ease-in-out;
+    }
+
+    .button-container .button:before {
+        content: "";
+        position: absolute;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        border-radius: 50%;
+        z-index: -99;
     }
 
     .section {
@@ -3726,7 +3785,7 @@ iframe {
         margin: 20px 0 20px 0;
         /* Adjust margin to create space */
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 40px;
         flex-grow: 1;
         /* Allow the grid to grow and take available space */
@@ -3762,7 +3821,7 @@ iframe {
 
     /* Styling for the city paragraph */
     .city-para {
-        width: 430px;
+        width: 370px;
         font-family: 'Poppins', sans-serif;
         font-size: 34px;
         font-weight: 600;
@@ -3789,6 +3848,14 @@ iframe {
         text-align: center;
         transform: translate(0, -150%);
         display: none;
+    }
+
+    .video_placeholder video {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        z-index: -1;
+        object-fit: fill;
     }
 }
 
@@ -3944,35 +4011,51 @@ iframe {
         }
     }
 
+    .carousel_header {
+        margin: 30px 0 0 0;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
     .items .item {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 180px;
-        height: 140px;
+        width: 100px;
+        height: 100px;
+        margin-top: 100px;
     }
 
     .item.prev {
         z-index: 2;
         opacity: 0.15;
-        height: 120px;
+        height: 80px;
         transform: translate(-125%, -50%);
     }
 
     .item.next {
         z-index: 2;
         opacity: 0.15;
-        height: 120px;
+        height: 80px;
         transform: translate(25%, -50%);
+    }
+
+    .button-container .button {
+        color: #fff;
+        font-size: 32px;
+        cursor: pointer;
+        position: relative;
+        opacity: 1;
+        transition: all 300ms ease-in-out;
     }
 
     .items .button-container {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        width: 240px;
+        transform: translate(-50%, 90%);
+        width: 160px;
         z-index: 100;
     }
 
@@ -3983,6 +4066,19 @@ iframe {
         position: relative;
         opacity: 1;
         transition: all 300ms ease-in-out;
+    }
+
+    .button-container .button:before {
+        content: "";
+        position: absolute;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        border-radius: 50%;
+        z-index: -99;
     }
 
     .section {
@@ -4066,7 +4162,7 @@ iframe {
         margin: 20px 0 20px 0;
         /* Adjust margin to create space */
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 40px;
         flex-grow: 1;
         /* Allow the grid to grow and take available space */
@@ -4102,7 +4198,7 @@ iframe {
 
     /* Styling for the city paragraph */
     .city-para {
-        width: 430px;
+        width: 310px;
         font-family: 'Poppins', sans-serif;
         font-size: 34px;
         font-weight: 600;
@@ -4129,5 +4225,13 @@ iframe {
         text-align: center;
         transform: translate(0, -150%);
         display: none;
+    }
+
+    .video_placeholder video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: fill;
     }
 }
